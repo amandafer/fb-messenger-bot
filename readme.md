@@ -3,8 +3,8 @@ This is a simple python template that uses Flask to build a webhook for Facebook
 Complete tutorial and original repository by: https://blog.hartleybrody.com/fb-messenger-bot/
 
 ## Install Python Dependencies
-mkvirtualenv test-bot
-pip install -r requirements.txt
+- mkvirtualenv test-bot
+- pip install -r requirements.txt
 
 ## Heroku Configuration
 - heroku create
