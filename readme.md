@@ -1,9 +1,23 @@
 # Facebook Messenger Bot
 This is a simple python template that uses Flask to build a webhook for Facebook's Messenger Bot API.
+Complete tutorial and original repository by: https://blog.hartleybrody.com/fb-messenger-bot/
 
-Read more in my [tutorial that uses this repository](https://blog.hartleybrody.com/fb-messenger-bot/).
+## Install Python Dependencies
+mkvirtualenv test-bot
+pip install -r requirements.txt
 
-*New:* [Check out my Facebook Messenger Bot Course](https://facebook-messenger-bot.teachable.com/p/facebook-messenger-bot/). It walks you through the process of getting this bot hosted on heroku step-by-step, and also unlocks all the content that's hidden in this repo's branches.
+## Heroku Configuration
+- heroku create
+- git push heroku master
+- heroku open (this command will open the heroku url created, it will be used as a callback url for the webhook)
+- heroku config:add PAGE_ACCESS_TOKEN=your_page_token_here
+- heroku config:add VERIFY_TOKEN=your_verification_token_here (any string)
+
+## Connecting webhook to Facebook page
+At https://developers.facebook.com/apps/, add the product WEBHOOK. When prompted, provide the url created by heroku as the Callback URL and the chosen VERIFY_TOKEN.
+
+Select your page to be subscribed by your webhook events.
+
 
 ## "Callback verification failed"
 
